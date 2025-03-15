@@ -56,7 +56,25 @@ dependencies:
   permission_handler: ^11.3.0
 ```
 
+## 🔐 Permissions
 
+The app requires the following permissions:
+
+### Android
+Add these to `AndroidManifest.xml`:
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+### iOS
+Add these to `Info.plist`:
+```xml
+<key>NSCameraUsageDescription</key>
+<string>We need access to your camera to scan images.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>We need access to your gallery to select images.</string>
+```
 
 ## ⚠️ Note on Arabic Language Support
 By default, Google ML Kit's text recognition performs well with English text but has **limited support** for Arabic and some other languages. To improve Arabic OCR:
@@ -78,10 +96,10 @@ This project is **open-source** under the MIT License. Feel free to use and modi
 ## 📸 Screenshots
 
 ### Home Screen
-![Home Screen](screenshots/Screenshot_1.jpg)
+<img src="screenshots/Screenshot_1.jpg" width="300" alt="Home Screen">
 
 ### Extracted Text
-![Extracted Text](screenshots/Screenshot_2.jpg)
+<img src="screenshots/Screenshot_2.jpg" width="300" alt="Extracted Text">
 
 ---
 Happy Coding! 🚀
